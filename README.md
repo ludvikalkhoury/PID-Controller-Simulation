@@ -5,7 +5,7 @@ PID controller is a name commonly given to a three-term controller. P stands for
 
 In this repository, I will provide a MATLAB application (GUI) that can be used as an educational tool to understand, visualize, and test the concept of PID controllers in a real-life example.  The application is inspired by the system built in [2]. In this tool, the PID controller will attempt to balance a green ball on a red moving bar. The position of the ball is measured, and the slope of the bar is modified (increased or decreased) in order to balance the green ball at a position defined by the user. 
 
-In the application I provide, the user can control:
+In the simulation provided here, the user can control:
 
 	1) the initial position of the ball
 	
@@ -16,42 +16,6 @@ In the application I provide, the user can control:
 	4) the PID controller’s gains, namely, Kp, Ki, and Kd gains that correspond to P, I, and D terms, respectively. 
 	
 	
-In Fig. 1, we show the red moving bar and the green ball. For this illustration, the initial position of the ball is set to 4 and the initial slope of the moving bar is set to 20 degrees. Once we run the program, the PID controller will balance the ball at the desired position (defined by the user).
- 
-**Fig. 1**
-![Fig1](https://user-images.githubusercontent.com/66024269/178178129-7e5fa69c-d071-48cb-a65b-4c176624d5bb.png)
-
-
-The ball’s new position, x(n+1), depends on the ball’s previous position, x(n), and step size, S(n), which is a function of the slope of the moving bar. The ball’s new position can be expressed as follows:
-
-
-![eq](https://user-images.githubusercontent.com/66024269/178178398-b5ffb4f1-38a4-44cd-9193-54571066cdd2.PNG)
-
-
-S(n) is shown in Fig. 2. For instance, if the slope of the bar is 10 degrees and the current ball position is 2, then the new ball position is 2 + 0.1 = 2.1. 
- 
- 
-**Fig. 2**
-![Fig2](https://user-images.githubusercontent.com/66024269/178178549-c02b8625-5c6b-4f43-811f-15812718f7dd.png)
-
-We will now try to understand how the PID controller updates the slope of the moving bar in order to balance the ball at the desired position. We will assume that the desired position of the ball, D<sub>0</sub>, is set to 0 and that the PID controller will update the slope of the bar so that the ball is balanced at D<sub>0</sub>. 
-
-**Proportion term:**
-To better understand the proportion term, let’s set Kp = c1, Ki = 0, and Kd = 0. At each iteration, the controller will measure the distance between the ball and the D<sub>0</sub>, denoted by ∆<sub>0</sub>. We will assume that the initial slope of the bar is 10 degrees. If ∆<sub>0</sub> is positive, this implied that the ball is to the right of D<sub>0</sub>. Therefore, the Kp will update the slope value of the bar in order to move the ball by value c1 to the left. This will result in a smaller ∆<sub>0</sub>. Since the proportional value is fixed and does not adaptively change, ∆<sub>0</sub> will fluctuate. This could typically cause the ball to oscillate around the desired position. The reason for the oscillation is that, if the ball is to the right of D<sub>0</sub>, then the controller will force it to the left. Now that the ball is to the left of D<sub>0</sub>, the controller will force it back to the right. Please note that the proportion term only reacts to the distance of the ball with respect to the desired position. It will not react to the ball’s velocity or acceleration. 
-
-**Derivative term:**
-As we saw above that using the proportion term could cause the system to oscillate around the desired position but will not balance the ball. To resolve this matter, we introduce a derivative term to the controller. First, let’s understand the effect that the derivative term has on the controller. We assume that Kp = 0, Ki = 0, and Kd = c2. 
-When we only use the derivative term to control the system, the system will then measure the velocity of the ball and tries to set it to zero. In this case, the controller will keep on modifying the value of the slope of the bar until the velocity of the ball is zero. An artifact that could result when we only use the derivative term is that the system might balance the ball at a wrong desirable position. This is because the controller only aims to bring the ball’s velocity to zero regardless of where it stops. To solve the problem, we should introduce the proportion term into the control. By doing that, we will ensure that the ball will balance and stop as close as possible to the desired position. 
-Proportion and derivative terms will usually suffice for this example if we are okay with the ball balancing close to the desired position. However, when the ball is too close to the desired position (but not fully centered at the desired position) the system will not be affected by the proportion term (since the ball is very close to the desired point) nor the derivative term (since the velocity of the ball will be zero at this point). If our application requires a high level of precision, then introducing the integration term will solve the problem.
-
-**Integration term:**
-The integration term adds up the error values over a time period. The more time elapses, the bigger the error measured by the integration term gets (if it was not corrected by the controller). In the example where the ball very stops close to the desired position (but not exactly on it), the proportion and derivative terms will remain unchanged. However, since the system is still measuring a small error, the error introduced by the integral term will slowly increase with time. To compensate for this error (introduced by the integration term) the controller will slowly update the slope of the bar so that the ball is fully centered at the desired position.  
-
-
-
-Now that we understand the PID controller concept, let’s use the application in order to test different values of proportion, derivation, and integration gains in order to balance the ball at a set desired position. 
-
-
 
 **Reference:**
 
