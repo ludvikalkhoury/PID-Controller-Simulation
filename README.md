@@ -13,8 +13,8 @@ In the application I provide, the user can control:
 	
 In Fig. 1, we show the red moving bar and the green ball. For this illustration, the initial position of the ball is set to 4 and the initial slope of the moving bar is set to 20 degrees. Once we run the program, the PID controller will balance the ball at the desired position (defined by the user).
  
-Fig. 1    
-    ![Fig1](https://user-images.githubusercontent.com/66024269/178178129-7e5fa69c-d071-48cb-a65b-4c176624d5bb.png)
+Fig. 1
+![Fig1](https://user-images.githubusercontent.com/66024269/178178129-7e5fa69c-d071-48cb-a65b-4c176624d5bb.png)
 
 The ball’s new position, x(n+1), depends on the ball’s previous position, x(n), and step size, S(n), which is a function of the slope of the moving bar. The ball’s new position can be expressed as follows:
 
@@ -27,7 +27,7 @@ S(n) is shown in Fig. 2. For instance, if the slope of the bar is 10 degrees and
  
  
 Fig. 2
-    ![Fig2](https://user-images.githubusercontent.com/66024269/178178549-c02b8625-5c6b-4f43-811f-15812718f7dd.png)
+![Fig2](https://user-images.githubusercontent.com/66024269/178178549-c02b8625-5c6b-4f43-811f-15812718f7dd.png)
 
 We will now try to understand how the PID controller updates the slope of the moving bar in order to balance the ball at the desired position. We will assume that the desired position of the ball, D_0, is set to 0 and that the PID controller will update the slope of the bar so that the ball is balanced at D_0. 
 
