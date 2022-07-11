@@ -6,10 +6,15 @@ PID controller is a name commonly given to a three-term controller. P stands for
 In this repository, I will provide a MATLAB application (GUI) that can be used as an educational tool to understand, visualize, and test the concept of PID controllers in a real-life example.  The application is inspired by the system built in [2]. In this tool, the PID controller will attempt to balance a green ball on a red moving bar. The position of the ball is measured, and the slope of the bar is modified (increased or decreased) in order to balance the green ball at a position defined by the user. 
 
 In the application I provide, the user can control:
+
 	1) the initial position of the ball
+	
 	2) the initial slope of the bar
+	
 	3) the desired position at which the ball should stop
+	
 	4) the PID controller’s gains, namely, Kp, Ki, and Kd gains that correspond to P, I, and D terms, respectively. 
+	
 	
 In Fig. 1, we show the red moving bar and the green ball. For this illustration, the initial position of the ball is set to 4 and the initial slope of the moving bar is set to 20 degrees. Once we run the program, the PID controller will balance the ball at the desired position (defined by the user).
  
