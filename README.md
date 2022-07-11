@@ -27,7 +27,7 @@ The ball’s new position, x(n+1), depends on the ball’s previous position, x(
 
 ![eq](https://user-images.githubusercontent.com/66024269/178178398-b5ffb4f1-38a4-44cd-9193-54571066cdd2.PNG)
 
-![](https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png | width=100)
+![](https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png | width="100")
 
 S(n) is shown in Fig. 2. For instance, if the slope of the bar is 10 degrees and the current ball position is 2, then the new ball position is 2 + 0.1 = 2.1. 
  
