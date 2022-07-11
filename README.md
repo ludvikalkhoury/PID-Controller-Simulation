@@ -1,4 +1,4 @@
-# PID-Controller-MATLAB-Simulation
+## PID-Controller-MATLAB-Simulation
 
 
 PID controller is a name commonly given to a three-term controller. P stands for the proportional term, I for the integral term, and D for the derivative term in the controller [1]. PID controllers are probably the most widely used industrial controller. Even complex industrial control systems may comprise a control network whose main control building block is a PID control module [1].  
@@ -10,6 +10,7 @@ In the application I provide, the user can control:
 	2) the initial slope of the bar
 	3) the desired position at which the ball should stop
 	4) the PID controller’s gains, namely, Kp, Ki, and Kd gains that correspond to P, I, and D terms, respectively. 
+	
 In Fig. 1, we show the red moving bar and the green ball. For this illustration, the initial position of the ball is set to 4 and the initial slope of the moving bar is set to 20 degrees. Once we run the program, the PID controller will balance the ball at the desired position (defined by the user).
  
 
