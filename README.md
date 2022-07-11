@@ -7,12 +7,9 @@ In this repository, I will provide a MATLAB application (GUI) that can be used a
 
 In the simulation provided here, the user can control:
 
-	1) the initial position of the ball
-	
-	2) the initial slope of the bar
-	
-	3) the desired position at which the ball should stop
-	
+	1) the initial position of the ball	
+	2) the initial slope of the bar	
+	3) the desired position at which the ball should stop	
 	4) the PID controller’s gains, namely, Kp, Ki, and Kd gains that correspond to P, I, and D terms, respectively
 	
 	
