@@ -13,7 +13,7 @@ In the simulation provided here, the user can control:
 	
 	3) the desired position at which the ball should stop
 	
-	4) the PID controller’s gains, namely, Kp, Ki, and Kd gains that correspond to P, I, and D terms, respectively. 
+	4) the PID controller’s gains, namely, Kp, Ki, and Kd gains that correspond to P, I, and D terms, respectively
 	
 	
 
