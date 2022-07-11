@@ -13,9 +13,9 @@ In the application I provide, the user can control:
 	
 In Fig. 1, we show the red moving bar and the green ball. For this illustration, the initial position of the ball is set to 4 and the initial slope of the moving bar is set to 20 degrees. Once we run the program, the PID controller will balance the ball at the desired position (defined by the user).
  
- 
+<p align="center">
 ![Fig1](https://user-images.githubusercontent.com/66024269/178177855-c1eb8446-c7f2-41c3-bb30-58ea0641dc3c.png)
-
+</p>
 
 
 The ball’s new position, x(n+1), depends on the ball’s previous position, x(n), and step size, S(n), which is a function of the slope of the moving bar. The ball’s new position can be expressed as follows:
