@@ -23,6 +23,7 @@ S(n)  is shown in Fig. 2. For instance, if the slope of the bar is 10 degrees an
  
 
 We will now try to understand how the PID controller updates the slope of the moving bar in order to balance the ball at the desired position. We will assume that the desired position of the ball, D_0, is set to 0 and that the PID controller will update the slope of the bar so that the ball is balanced at D_0. 
+![Fig1](https://user-images.githubusercontent.com/66024269/178177855-c1eb8446-c7f2-41c3-bb30-58ea0641dc3c.png)
 
 Proportion term:
 To better understand the proportion term, let’s set Kp = c1, Ki = 0, and Kd = 0. At each iteration, the controller will measure the distance between the ball and the D_0, denoted by ∆_0. We will assume that the initial slope of the bar is 10 degrees. If ∆_0 is positive, this implied that the ball is to the right of D_0. Therefore, the Kp will update the slope value of the bar in order to move the ball by value c1 to the left. This will result in a smaller ∆_0. Since the proportional value is fixed and does not adaptively change, ∆_0 will fluctuate. This could typically cause the ball to oscillate around the desired position. The reason for the oscillation is that, if the ball is to the right of D_0, then the controller will force it to the left. Now that the ball is to the left of D_0, the controller will force it back to the right. Please note that the proportion term only reacts to the distance of the ball with respect to the desired position. It will not react to the ball’s velocity or acceleration. 
