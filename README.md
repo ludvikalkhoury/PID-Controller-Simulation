@@ -55,7 +55,7 @@ If you want to run the Python GUI, use the following command line:
 python \controller\PID.py
 ```
 
-The repository also contains a '.exe' file (PID.exe) that can run the simulator directly. 
+The repository also contains a '.exe' file (PID.exe from /Python/controller/dist/PID.exe) that can run the simulator directly. 
 
 
 **Reference:**
