@@ -52,7 +52,7 @@ python -m controller -t "PID" -e "ball" --kp 0.1 --ki 0.1 --kd 0.4 --final-posit
 
 If you want to run the Python GUI, use the following command line:
 ```
-python \controller\GUI.py
+python \controller\PID.py
 ```
 
 The repository also contains a '.exe' file (PID.exe) that can run the simulator directly. 
