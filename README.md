@@ -1,4 +1,4 @@
-## PID-Controller-MATLAB-Simulation
+## PID-Controller-Simulation
 
 
 PID controller is a name commonly given to a three-term controller. P stands for the proportional term, I for the integral term, and D for the derivative term in the controller [1]. PID controllers are probably the most widely used industrial controller. Even complex industrial control systems may comprise a control network whose main control building block is a PID control module [1].  
