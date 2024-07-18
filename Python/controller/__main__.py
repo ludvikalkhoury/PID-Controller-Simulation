@@ -9,7 +9,7 @@ import warnings
 import os
 
 
-parser1 = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawTextHelpFormatter, prog='python -m pyX')
+parser1 = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawTextHelpFormatter, prog='python -m controller')
 
 
 parser1.add_argument( "-t", "--type", default='PID', type=str, help='The controller type.')
