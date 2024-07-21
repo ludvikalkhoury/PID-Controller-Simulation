@@ -5,4 +5,4 @@
 *.pyc
 *.egg-info
 *.code-workspace
-
+controller\build\
